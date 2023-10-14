@@ -5,15 +5,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <com.flyjingfish.xfermodedemo.XfermodeView1
         android:id="@+id/xfermodeView1"
-        android:layout_width="0dp"
-        android:layout_height="200dp"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_rect"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
     <com.flyjingfish.xfermodedemo.XfermodeView2
         android:id="@+id/xfermodeView2"
-        android:layout_width="0dp"
-        android:layout_height="200dp"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_rect"
         app:layout_constraintTop_toBottomOf="@+id/xfermodeView1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
