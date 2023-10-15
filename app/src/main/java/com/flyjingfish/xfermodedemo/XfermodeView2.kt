@@ -19,23 +19,23 @@ class XfermodeView2(context: Context, attrs: AttributeSet?) : View(context, attr
 
 
     val sourceImage =
-        Bitmap.createBitmap(150f.dp().toInt(), 150f.dp().toInt(), Bitmap.Config.ARGB_8888)
+        Bitmap.createBitmap(150f.dp.toInt(), 150f.dp.toInt(), Bitmap.Config.ARGB_8888)
     val destinationImage =
-        Bitmap.createBitmap(150f.dp().toInt(), 150f.dp().toInt(), Bitmap.Config.ARGB_8888)
+        Bitmap.createBitmap(150f.dp.toInt(), 150f.dp.toInt(), Bitmap.Config.ARGB_8888)
 
     init {
         val canvas = Canvas(destinationImage)
         paint.color = OVAL_COLOR
         //下边起点x是0，是因为我要按照文档的图把圆画到右上角
-        canvas.drawOval(0f, 0f, 100f.dp(), 100f.dp(), paint)
+        canvas.drawOval(0f, 0f, 100f.dp, 100f.dp, paint)
         canvas.setBitmap(sourceImage)
         paint.color = RECT_COLOR
         //下边起点y是50，是因为我要按照文档的图把正方形画到左下角
-        canvas.drawRect(50f.dp(), 50f.dp(), 150f.dp(), 150f.dp(), paint)
+        canvas.drawRect(50f.dp, 50f.dp, 150f.dp, 150f.dp, paint)
     }
 
     override fun onDraw(canvas: Canvas) {
-        val count = canvas.saveLayer(0f, 0f, 150f.dp(), 150f.dp(), null)
+        val count = canvas.saveLayer(0f, 0f, 150f.dp, 150f.dp, null)
         canvas.drawBitmap(destinationImage, 0f, 0f, paint)
         paint.xfermode = xfermode
         canvas.drawBitmap(sourceImage, 0f, 0f, paint)
