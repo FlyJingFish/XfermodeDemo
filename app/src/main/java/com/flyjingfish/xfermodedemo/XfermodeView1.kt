@@ -22,12 +22,12 @@ class XfermodeView1(context: Context, attrs: AttributeSet?) : View(context, attr
             field = value
         }
     override fun onDraw(canvas: Canvas) {
-        val count = canvas.saveLayer(0f,0f,150f.dp,150f.dp,null)
+        val count = canvas.saveLayer(0f,0f,150.dp,150.dp,null)
         paint.color = OVAL_COLOR
-        canvas.drawOval(0f.dp,0f,100f.dp,100f.dp,paint)
+        canvas.drawOval(0.dp,0f,100.dp,100.dp,paint)
         paint.xfermode = xfermode
         paint.color = RECT_COLOR
-        canvas.drawRect(50f.dp,50f.dp,150f.dp,150f.dp,paint)
+        canvas.drawRect(50.dp,50.dp,150.dp,150.dp,paint)
         paint.xfermode = null
         canvas.restoreToCount(count)
     }

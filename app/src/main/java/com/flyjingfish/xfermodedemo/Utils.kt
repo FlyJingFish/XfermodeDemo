@@ -3,10 +3,10 @@ package com.flyjingfish.xfermodedemo
 import android.content.res.Resources
 import android.util.TypedValue
 
-val Float.dp
+val Int.dp
     get() =
         TypedValue.applyDimension(
             TypedValue.COMPLEX_UNIT_DIP,
-            this,
+            this.toFloat(),
             Resources.getSystem().displayMetrics
         )
